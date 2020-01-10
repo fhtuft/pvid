@@ -3,8 +3,8 @@ CFLAGS = -Wall -g -I../FFmpeg
 LD = gcc 
 FFMPEGLIBS = -lavformat -lavcodec -lavutil -lswresample 
 FFMPEGLIBS += -lz -lva -lpthread -lm -lz -lX11  -lva-drm  -lva-x11 
-FFMPEGLIBS += -lvorbis -lfdk-aac -lmp3lame -lvdpau 
-FFMEPGLIBS += -lx264 #-lx265
+FFMPEGLIBS += -lfdk-aac -lmp3lame -lvdpau #-libvorbis -loupus -lopusfile
+FFMPEGLIBS += -lx264 #-lvpx-vp9 -lvpx -lx265
 LDFLAGS = -L../ffmpeg_build/lib/ 
 
 LDFLAGS += $(FFMPEGLIBS)
